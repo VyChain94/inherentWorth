@@ -17,9 +17,7 @@
     <title>EYE DUB</title>
 </head>
 <body>
-            <!-- FIX -->
-    <!-- <div class="fix" style="background:green;"> -->
-  
+
     <div class="static">
         <div class="static-borderT"></div>
         <ul>
@@ -30,9 +28,8 @@
         </ul>
     <div class="static-borderB"></div>
     </div>
-    
-        
-<nav>
+
+<nav class="fullnav">
     <a href="index.html"><img class="headerImg" src="images/headerLogo.png" alt="company logo"></a>
     <ul>
         <li class="navline1"></li>
@@ -46,33 +43,48 @@
 </nav>
 
 <!-- MOBILE NAV -->
-    <!-- Top Navigation Menu -->
-    <div class="topnav">
-        <a href="index.html" class="active"><img class="headerImg" src="images/headerLogo.png" alt="company logo"></a>
-        <div id="myLinks">
-          <a href="#news">HOME</a>
-          <a href="#contact">DIVE</a>
-          <a href="#about">ABOUT</a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+<nav class="navbar navbar-expand-lg flex-column bg-none">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img class="headerImg" src="images/headerLogo.png" alt="company logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">AOW</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">DIVE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">CONNECT</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-<div class="heroSection">
-    <h1 class="heroText">INNER WORK SO<br>
+  <div class="heroSection mt-0">
+    <div class="heroContent">
+    <h1 class="col-12 heroText text-center lh-base text-xl-start ms-xl-5">INNER WORK SO<br>
         YOU CAN SAVE<br>
          YOURSELF<br>
     </h1>
-    <img class="heroImage" src="images/heroImage.png" class="img-fluid" alt="circle image of old television">
+    <img class="heroImg" src="images/heroImage.png" alt="circle image of old television">
+    <div class="position-relative">
+    <button class="heroBtn position-absolute top-80 start-50 translate-middle ms-xl-5">TAKE ME</button>
+</div>
+</div>
 </div>
 
-<div class="heroBtn">
-    <button>TAKE ME</button>
-</div>
-
-
-<div class="scrolly"> 
+<div class="scrolly mt-3"> 
     <ul class="scrolly-list">
         <li>a society that steals our inherent worth is dangerous <img src="images/scrollStarDesk.png" alt=""> </li> 
         <li class="full">a society that steals our inherent worth is dangerous <img src="images/scrollStarDesk.png" alt=""> </li> 
@@ -83,49 +95,43 @@
     </ul>
 </div>
 
-<div class="grid1">
-    <img class="star" src="images/StarMedium@3xnew.png" alt="">
-<div class="content">
-    <div class="title1"><h3>INHERENT WORTH IS ABOUT...</h3></div>
-     <h2 class="text1">INNER WORLD <br>
-        REBUILDING FOR THE<br> 
-        CREATIVELY<br>
-         INCLINED.
-    </h2>
-     <!-- <img class="circle1" src="IMAGES/Ellipse 2@3x.png" alt=""> -->
-     <div class="subtitle1">We build our realities, from the inside out.</div>
-</div>
-</div>
- 
-<!-- <section></section> -->
-<div class="grid2">
-    <img class="star" src="images/StarMedium@3xnew.png" alt="">
-<div class="content">
-<div class="title2"><h3>WHAT WE BELIEVE...</h3></div>
-     <h2 class="text2">You have more<br>
-        power than you<br> 
-        think.<br>
-    </h2>
-     <!-- <img class="grid2circle" src="IMAGES/Ellipse 2@3x.png" alt=""> -->
-<div class="subtitle2">You have value. Both inherent and value<br>
-         to offer. You deserve to be valued for who<br>
-          you truly are.
-</div>
+<div class="container col-12 mx-auto part1">
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="col"><img class="row mt-4" src="images/StarMedium@3xnew.png" alt=""></div>
+            <h3 class="col-12">INHERENT WORTH IS ABOUT...</h3>
+            <h2 class="col">INNER WORLD REBUILDING FOR THE CREATIVELY INCLINED.</h2>
+            <h4>We build our realities, from the inside out.</h4>
+        </div>
+    </div>
+
+
+<div class="container col-12 mx-auto part1">
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="col"><img class="row mt-4" src="images/StarMedium@3xnew.png" alt=""></div>
+            <h3 class="col-12">What We Believe...</h3>
+            <h2 class="col">You have More Power Than You Think</h2>
+            <h4>You have value. Both inherent and value to offer.
+                You deserve to be valued for who you truly are.
+            </h4>
+        </div>
+    </div>
 </div>
 
- <div class="grid3">
-    <img class="star" src="images/StarMedium@3xnew.png" alt="">
-<div class="content">
-    <div class="title3"><h3>for those who...</h3></div>
-      <ul class="text3">
-        <li style="margin-top: 12px;">Dream of living in full color</li>
-        <li>Want to move the world with their creations</li>
-        <li>Want some quiet from the voice inside their head</li>
-        <li>Crave inner peace and limitless self support</li>
-     </ul>
-       <!-- <img class="grid3circle" src="IMAGES/Ellipse 2@3x.png" alt=""> -->
-      <div class="subtitle3">This was made for you</div>
-</div>
+<div class="container col-12 mx-auto part1">
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="col"><img class="row mt-4" src="images/StarMedium@3xnew.png" alt=""></div>
+            <h3 class="col-12">For Those Who...</h3>
+            <div class="col">
+                <ul class="list-dec">
+                    <li style="margin-top: 12px;">Dream of living in full color</li>
+                    <li>Want to move the world with their creations</li>
+                    <li>Want some quiet from the voice inside their head</li>
+                    <li>Crave inner peace and limitless self support</li>
+                </ul>
+                <h4>This is made for you</h4>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="scrolly">
@@ -139,37 +145,34 @@
     </ul>
 </div>
 
-<div class="menu">
-    <div class="menuHead">
-    <img class="menustar" src="images/StarMedium@3xnew.png" alt="">
-     <h2 class="menutext">Menu</h2>
-    </div>
-     <div class="menusubtitle">
-         <div> Anatomy of Worth ....Inner World Rebuilding 101</div>
-         <div> Dive ....1-on-1 Deep Work to Change Your Reality</div>
-         <p>* Details & dates coming very soon.</p>
+<div class="container col-12 mx-auto part1">
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="col"><img class="row mt-4" src="images/StarMedium@3xnew.png" alt=""></div>
+            <h2 class="col-12">Menu</h2>
+            <p class="list-dec">Anatomy of Worth ....Inner World Rebuilding 101</p>
+            <p class="list-dec">Dive ....1-on-1 Deep Work to Change Your Reality</p>
+            <h4>* Details & dates coming very soon.</h4>
+        </div>
     </div>
 </div>
 
- <div class="note">
+<div class="container note col-12 col-md-10 col-lg-8 text-center">
     <h3>A note from someone who has been there...</h3>
-    <div class="s1"> I see you in ways others don’t. I see the facade but I also<br>
-         see the value. Inherent Worth is the key you’ve been<br> looking for.</div>
-        <div class="b1">Read my story here.</div>
+    <div>I see you in ways others don’t. I see the facade but I also
+        see the value. Inherent Worth is the key you’ve been looking for.</div>
+    <p>Read my story here.</p>
 </div>
 
-
-<div class="social">
+<div class="col mt-5 text-center">
     <h3>Find us on</h3>
-<div class="sites">
-    <img src="images/instagram.svg" alt="">
-    <img src="images/tiktok.svg" alt="">
-    <img src="images/bereal.svg" alt="">
+<div class="row justify-content-evenly align-items-center px-2">
+    <div class="col col-lg-1"><img src="images/instagram.svg" alt=""></div>
+    <div class="col col-lg-1"><img src="images/tiktok.svg" alt=""></div>
+    <div class="col col-lg-1"><img src="images/bereal.svg" alt=""></div>
 </div>
 </div>
 
-
-<div class="scrolly">
+<div class="scrolly mt-5">
     <ul class="scrolly-list">
         <li>a society that steals our inherent worth is dangerous<img src="images/scrollStarDesk.png" alt=""></span> </li>         
         <li>a society that steals our inherent worth is dangerous<img src="images/scrollStarDesk.png" alt=""></span> </li>         
@@ -184,60 +187,46 @@
     </ul>
 </div>
 
-	<!-- contact form -->
-		
-    <form name="contact" action="/pages/thankyou.html" method="POST" data-netlify="true">
-        <!-- structure the form items in a list format -->
-                <ul class="form" style="list-style:none;">
-                    <li>
-                        <h3>STAY CONNECTED</h3>
-                        <!-- create a label for each data entry portion (first & last Name, email, message) -->
-                        <!-- create input fields that contain id, and name. for text & email -->
-                        <label for="name">First Name:</label>
-                        <input type="text" id="name" name="userName" required>
-                    </li>
-                    <li>
-                        <!-- input that only accepts email addresses -->
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="userEmail" required>
-                    </li>
-                    <!-- <li>
-                        <label for="message">Message:</label>
-                        <textarea name="message" id="msg" required></textarea>
-                    </li> -->
-                        <button style="margin: 15px 0 0 15px; background: #333;" class="formButton" type="submit">Send Message</button>
-                </ul>	
-                <p style="width: 100%; color:#494949; font-size:12px;">There will be no spam sent. No one has time for that. just the Ocassional update of exciting things we have going on. </p>		
-            </form>
+<h3 class="text-center">STAY CONNECTED</h3>
+<form class='col-12 col-sm-8 mx-auto'>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="ename">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <button type="submit" class="formBtn">Submit</button>
+</form>
 
-            <footer>
-                <a href="index.html"><img class="footerImg" src="images/IW Logo White @1x.png" alt="company logo"></a>
-                <ul>
-                    <li class="footline1"></li>
-                    <li> <a href="index.html">HOME</a></li>
-                    <li> <a href="#">AOW</a></li>
-                    <li> <a href="#">DIVE</a></li>
-                    <li> <a href="#">ABOUT</a></li>
-                    <li> <a href="#">CONNECT</a></li>
-                    <li class="footline2"></li>
-                </ul>
-                <div class="static-footer">
-                    <div class="footer-borderT"></div>
-                    <ul>
-                        <li>YOU DESERVE TO BE HERE</li>
-                        <li>YOU DESERVE TO BE HERE</li>
-                        <li>YOU DESERVE TO BE HERE</li>
-                        <li>YOU DESERVE TO BE HERE</li>
-                    </ul>
-                    <div class="footer-borderB"></div>
-                </div>
-            </footer>
+<footer>
+    <ul class="list-group col-12 list-group-vertical list-group-horizontal-md ">
+        <a href="index.html"><img class="footerImg" src="images/IW Logo White @1x.png" alt="company logo"></a>
+        <!-- <li class="footline1"></li> -->
+        <li class="list-item"> <a href="index.html">HOME</a></li>
+        <li class="list-item"> <a href="#">AOW</a></li>
+        <li class="list-item"> <a href="#">DIVE</a></li>
+        <li class="list-item"> <a href="#">ABOUT</a></li>
+        <li class="list-item"> <a href="#">CONNECT</a></li>
+        <!-- <li class="footline2"></li> -->
+    </ul>
+</footer>
+    <div class="static-footer">
+        <div class="footer-borderT"></div>
+        <ul>
+            <li>YOU DESERVE TO BE HERE</li>
+            <li>YOU DESERVE TO BE HERE</li>
+            <li>YOU DESERVE TO BE HERE</li>
+            <li>YOU DESERVE TO BE HERE</li>
+        </ul>
+    <div class="footer-borderB"></div>
+    </div>
 
 
-<!-- text-transform: uppercase; -->
-<!-- ADD ALT TEXTS -->
-<!-- FIX PRE-HEADER -->
-
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 <script src="index.js"></script>
 </body>
 </html>
