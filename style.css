@@ -62,9 +62,6 @@ left: 33%;
     display: flex;
     animation:scrolling 15s linear infinite ;
 }
-.part1{
-    border: 2px solid red;
-}
 
 
 @keyframes scrolling{
