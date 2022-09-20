@@ -60,7 +60,7 @@ left: 33%;
     list-style: none;
     height: 100%;
     display: flex;
-    animation:scrolling 15s linear infinite ;
+    animation:scrolling 18s linear infinite ;
 }
 
 
@@ -86,7 +86,6 @@ left: 33%;
     align-items: center;
     font-size: 1rem;
     white-space: nowrap;
-    display: none;
 }
 
 .fullnav{
@@ -185,9 +184,7 @@ a:hover{
     font-weight: 700;
     color: black;
 }
-/* .heroSection{
-    margin-top: -100px;
-} */
+
 .heroContent{
     margin-top: -300px;
 }
@@ -246,6 +243,18 @@ footer ul li{
     margin: 0 auto;
 }
 
+.section-star{
+    padding: 10px;
+    left: 10%;        
+}
+/* .section-main{
+    margin-top:20px ;
+    margin-bottom: 20px;
+} */
+.section-main{
+    margin:80px 0;
+}
+
 @media screen and (max-width: 1400px){
     .static ul, .static-footer ul{
         font-size: .8rem;
@@ -257,10 +266,9 @@ footer ul li{
         max-width: 858px;
         margin-left: 40%;
     }
-    .start-50 {
-        left: 10%!important;
+    .heroBtn {
+        left: 10%;
     }
-    
 }
 @media screen and (max-width: 992px){
     .fullnav{
@@ -333,12 +341,26 @@ footer ul li{
         margin: 0 auto;
     }
     .heroText{
-        /* transform: translateY(100%); */
         line-height: normal;
         font-size: 3em;
     }
 }
 
+@media screen and (min-width: 650px){   
+    .section-star{
+        position: absolute;
+        left: 2%;
+    }
+}
+@media screen and (min-width: 576px){   
+    .section-main{
+        margin-left: 20%;
+
+    }
+    .star {
+        left: 10%
+    }
+}
 @media screen and (max-width: 576px){
     .heroText{
         font-size: 2.5em;
@@ -346,6 +368,7 @@ footer ul li{
     .heroBtn{
         padding:12px 30px;
     }
+
 }
 @media screen and (max-width: 520px){
     .heroText{
@@ -355,6 +378,11 @@ footer ul li{
         margin-top: 5px;
     }
 }
+/* @media screen and (max-width: 466px){
+    .section-star{
+       text-align: center;
+    }
+} */
 @media screen and (max-width: 370px){
     .heroText{
         font-size: 1.5em;
