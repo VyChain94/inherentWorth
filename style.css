@@ -2,8 +2,8 @@ body{
     overflow-x: hidden;
     background: #F5F5F5;
     font-family: 'Archivo', sans-serif;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* TYPOGRAPHY */
@@ -46,20 +46,14 @@ height: 53px;
 
 .scrolly{
     overflow: hidden;
+    margin-top: -150px;
 }
 
 .scrolly-list{
     list-style: none;
     height: 100%;
     display: flex;
-    animation:scrolling 16s linear infinite ;
-}
-
-
-@keyframes scrolling{
-    0%{transform:translateX(80vw);}
-    100%{transform:translateX(-180vw);}
-    
+    animation:scrolling 18s linear infinite ;
 }
 
 .scrolly-list li{
@@ -79,6 +73,37 @@ height: 53px;
     white-space: nowrap;
 }
 
+@keyframes scrolling{
+    0%{transform:translateX(80vw);}
+    100%{transform:translateX(-180vw);}
+    
+}
+
+@media screen and (min-width: 304px) {
+    .scrolly {
+        margin-top: auto;
+    }
+  }
+
+@media screen and (min-width: 576px) {
+    .scrolly {
+        margin-top:-120px;
+    }
+  }
+
+@media screen and (min-width: 1200px) {
+    .scrolly {
+        margin-top:auto;
+    }
+  }
+
+@media screen and (min-width: 728px) {
+    .scrolly-list{
+        animation:scrolling 30s linear infinite ;
+    }
+  }
+
+  /* NAV */
 .fullnav{
     color:black;
     margin-top: 60px;
@@ -88,10 +113,17 @@ height: 53px;
     display: block;
 }
 .navbar-nav{
-    display: flex;
-    flex-direction: row;
     padding: 20px;
+    margin: auto;
 }
+
+@media screen and (min-width: 449px) {
+    .navbar-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+  }
 
 .static ul{
     list-style: none;
@@ -123,8 +155,6 @@ height: 53px;
     width: 100%;
     margin: auto;
 }
-
-
 
 nav ul{
     font-size: 1rem;
@@ -174,101 +204,153 @@ a:hover{
     }
 }
 
+.headerImg{
+    width: 90%;
+    margin-left: 15px;
+}
+
+@media screen and (min-width: 991px){
+    
+    .headerImg{
+        width: unset;
+        margin-left: 15px;
+    }
+}
+
+/* HERO 1 */
 .heroSection{
     display: grid;
     grid-template:1fr 20px auto 1fr / auto 1fr 2fr 2fr 1fr;
-    margin-top: 160px;
+    margin-top: 40px;
 }
+
 
 .heroText{
     grid-row: 1;
-    grid-column: 1 / 5;
+    grid-column: 1 / -1;
     z-index: 2;
+    font-size: 1.5rem;
+    text-align: center;
 
 }
 .heroImg{
     grid-row: 1 / -1;
-    grid-column: 3/ -1;
+    grid-column: 1/ -1;
     z-index: 0;
     width: 100%;
     max-width: 858px;
 }
-.headerImg{
-    margin-left: 15px;
-}
+
 .heroBtn{
     padding: 8px 16px;
     border-radius: 10px;
-    grid-row: 3;
-    grid-column: 1;
+    grid-row: 2;
+    grid-column: 1 / -1 ;
     cursor: pointer;
     background: #2B2B2B;
     color: white;
     border-radius: 10px;
     border: none;
     text-align: center;
-    font-size: 27px;
+    font-size: inherit;
     letter-spacing: 17%;
     box-shadow: 2px 5px #d6d6d6;
-    z-index: 3;
+    z-index: 2;
+    margin: auto;
 }
-@media screen and (max-width: 1200px) {
+
+@media screen and (min-width: 304px) {
+    .heroBtn {
+        grid-row: 4;
+    }
+  }
+
+@media screen and (min-width: 383px) {
     .heroText {
-      font-size: 86px;
+      font-size: 2rem;
+      grid-row: 1 / 2;
+    }
+    .heroBtn {
+        grid-row: 3;
     }
   }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 396px) {
+    .heroBtn {
+        grid-row: 4;
+    }
+  }
+
+@media screen and (min-width: 449px) {
     .heroText {
-      font-size: 56px;
+        font-size: 2.25rem;
+        grid-row: 1 / 3;
+    }
+    .heroBtn {
+        width: 144px;
+        height:61.71px;
     }
   }
-@media screen and (min-width: 728px) {
-    .scrolly-list{
-        animation:scrolling 30s linear infinite ;
-    }
-  }
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: 560px) {
     .heroText {
-      font-size: 40px;
-    }
-    .heroBtn{
-        padding: 6px 14px;
+        font-size: 2.5rem;
     }
   }
-@media screen and (max-width: 576px) {
+
+@media screen and (min-width: 576px) {
     .heroSection{
         text-align: center;
-        grid-template:1fr auto 1fr / 1fr 2fr auto 2fr 1fr;
+        grid-template:1fr 20px auto 1fr / auto 1fr 2fr 2fr 1fr
     }
     .heroImg{
         grid-row: 1 / -1;
-        grid-column: 1/ -1;
+        grid-column: 3/ -1;
+
     }
     .heroText{
+        text-align:initial;
         grid-row: 1;
-        grid-column: 2 / -2;
+        grid-column: 1 / -1;
         z-index: 2;
     }
     .heroBtn{
         grid-row: 2;
-        grid-column: 3;
-    }
-  }
-@media screen and (max-width: 449px) {
-    .heroText {
-      font-size: 33px;
-    }
-  }
-@media screen and (max-width: 370px) {
-    .heroText {
-      font-size: 1.75rem;
+        grid-column: 1;
     }
   }
 
+@media screen and (min-width: 768px) {
+    .heroText {
+        font-size: 56px;
+        grid-column: 1 / 5;
+      }
+      .heroBtn{
+          grid-row: 3;
+      }
+  }
+
+@media screen and (min-width: 992px) {
+    .heroSection{
+        margin-top: 160px;
+    }
+    .heroText {
+        font-size: 86px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+    .heroSection{
+        margin-top: 160px;
+    }
+    .heroText {
+        font-size: 96px;
+  }
+}
+
+/* HERO 2 */
 .hero2 {  
-    margin:0 20px;
     display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: .25fr 1fr 1fr / 1fr 1fr 1fr 1fr;
     gap: 0px 20px;
     grid-auto-flow: row;
   }
@@ -276,6 +358,7 @@ a:hover{
 .star { 
     grid-row: 2;
     grid-column: 1;
+    margin-left: 15px;
     max-width:100%;
     width:45.64px;
     z-index: 100;
@@ -305,21 +388,22 @@ a:hover{
     font-size: 12px;
     z-index: 100;
     width: 80%;
+    line-height: 33px;
 }
   
 .ellipse { 
     grid-row: 1 / -1;
     grid-column: 2 / -1; 
-    max-width: 100%;
-    width: 211.97px;  
+    width: 100%;
+    max-width: 211.97px;  
     z-index:0;
-    align-self: center;
+    /* align-self: center; */
  }
   
 @media screen and (min-width: 674px) {
     .hero2 {  
         display: grid;
-        grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+        grid-template: .5fr 1fr .75fr / 1fr 1fr 1fr 1fr 1fr;
         gap: 0px 20px;
         grid-auto-flow: row;
       }
@@ -354,7 +438,7 @@ a:hover{
      }
   }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 850px) {
 
     .hero2 h2 { 
         max-width: 80%;
@@ -366,7 +450,7 @@ a:hover{
   }
 
 @media screen and (min-width: 1024px) {
-    
+
     .hero2 h3 { 
         letter-spacing: 0.15em;   
     }
@@ -379,26 +463,35 @@ a:hover{
       
     .hero2 h4 { 
         letter-spacing: 0.17em;
-        width: 100%;
     }
 }
 
-/* ARTICLE */
+/* CHECKBOXES */
 .formList {  
     margin: 0 20px;
     display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: 1fr auto .75fr / 1fr 1fr 1fr 1fr;
     gap: 0px 20px;
     grid-auto-flow: row;
 }
 
+article .ellipse {
+    display: none;
+}
+
+.formList ul li {
+    list-style: none;
+    margin: 21px 0;
+    width: 100%;
+    margin-left: -40px;
+}
+
 .formList form {
-    grid-row: 2 / -1;
+    grid-row: 2;
     grid-column: 2 / -1;
     display: flex;
     font-size: 14px;
     flex-direction: column;
-    justify-content: center;
 }
 
 .formList h3 {
@@ -430,6 +523,7 @@ a:hover{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    z-index: 999;
   }
   
   /* Hide the browser's default checkbox */
@@ -460,7 +554,7 @@ a:hover{
   
   /* When the checkbox is checked, add a blue background */
 .option input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #FBFAFF;
 }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -488,19 +582,28 @@ a:hover{
     transform: rotate(45deg);
 }
 
-.formList ul li {
-    list-style: none;
-    margin: 21px 0;
+@media screen and (min-width: 359px) {
+    
+    article .ellipse {
+        grid-row: 1 / -1;
+        /* background: blue; */
+        display: block;
+        z-index: 0;
+    }
+
+    /* .formList h4 {
+        z-index: 999;
+        grid-row: 3;
+
+    } */
 }
-
-
 
 @media screen and (min-width: 674px) {
     
     .formList {  
         margin: 0 20px;
         display: grid;
-        grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+        grid-template: .5fr 1fr 25px / 1fr 1fr 1fr 1fr 1fr;
         gap: 0px 20px;
         grid-auto-flow: row;
     }
@@ -516,7 +619,6 @@ a:hover{
         font-weight: 600;
         line-height: 44px;
         letter-spacing: 0.05em;
-        
     }
       
     .formList h4 { 
@@ -550,7 +652,6 @@ a:hover{
 }
 
 /* SCROLLING TEXT BOTTOM */
-
 .scrollyB{
     overflow: hidden;
     margin-top: 40px;
@@ -562,7 +663,6 @@ a:hover{
     display: flex;
     animation:scrolling 20s linear infinite ;
 }
-
 
 @keyframes scrolling{
     0%{transform:translateX(80vw);}
@@ -587,7 +687,6 @@ a:hover{
     white-space: nowrap;
 }
 
-
 @media screen and (min-width: 673px){ 
     .scrollyB-list{
         list-style: none;
@@ -611,7 +710,6 @@ a:hover{
 }
 
 /* MENU */
-
 .menu {  
     margin:0 20px;
     display: grid;
@@ -696,7 +794,6 @@ a:hover{
     line-height: 18px;
     letter-spacing: 0.15em;
     }
-
 }
 
 /* NOTE */
@@ -722,8 +819,6 @@ a:hover{
     font-weight: 600;
     line-height: 22px;
     letter-spacing: 0.17em;
-    
-
 }
 
 .note h3 {
@@ -737,36 +832,33 @@ a:hover{
     font-weight: 500;
     line-height: 13px;
     letter-spacing: 0.17em;
-       
 }
 
 @media screen and (min-width: 572px) {
     
-.note {
-max-width: 560px;
-width: 100%;
-}
+    .note {
+        max-width: 560px;
+        width: 100%;
+    }
 
-.note h3 {
-font-size: 15px;
-line-height: 18px;
-letter-spacing: 0.15em;
+    .note h3 {
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.15em;
+    }
 
-}
+    .note div {
+        font-size: 12px;
+        line-height: 40px;
+        letter-spacing: 0.17em;
+        margin:41px 0;
 
-.note div {
-font-size: 12px;
-line-height: 40px;
-letter-spacing: 0.17em;
-margin:41px 0;
+    }
 
-}
-
-.note p {
-    font-size: 16px;
-    line-height: 34px;
-}
-
+    .note p {
+        font-size: 16px;
+        line-height: 34px;
+    }
 }
 
 @media screen and (min-width: 1024px){
@@ -804,7 +896,6 @@ margin:41px 0;
 }
 
 /* SOCIAL */
-
 .social {
     width: 50%;
     margin: 0 auto;
@@ -909,7 +1000,6 @@ margin:41px 0;
     text-align: right;
 }
 
-
 /* FOOTER */
 footer {
     width: 100%;
@@ -1011,7 +1101,6 @@ footer img{
     width: 10.75em;
     display: none;
 }
-
 
 @media screen and (min-width: 600px){
     
